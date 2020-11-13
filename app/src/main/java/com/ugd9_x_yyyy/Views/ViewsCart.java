@@ -229,7 +229,7 @@ public class ViewsCart extends Fragment{
                         String tglTransaksi = jsonObject.optString("tglTransaksi");
                         String totalBiaya = jsonObject.optString("totalBiaya");
                         String namaToko = jsonObject.optString("namaToko");
-                        System.out.println("Nama Toko : "+namaToko);
+//                        System.out.println("Nama Toko : "+namaToko);
                         JSONArray jsonArray1 = jsonObject.optJSONArray("dtbuku");
                         List<DTBuku> DTBukuList = new ArrayList<>();
                         for(int j = 0; j < jsonArray1.length(); j++)
@@ -241,7 +241,7 @@ public class ViewsCart extends Fragment{
                             String namaBuku = jsonObjectDT.optString("namaBuku");
                             String harga = jsonObjectDT.optString("harga");
                             String gambar = jsonObjectDT.optString("gambar");
-                            System.out.println("Nama Buku : "+namaBuku);
+//                            System.out.println("Nama Buku : "+namaBuku);
                             DTBuku dtBuku = new DTBuku(Integer.parseInt(idBuku), noTransaksi, Integer.parseInt(jumlah), namaBuku,
                                     Double.parseDouble(harga),gambar);
                             DTBukuList.add(dtBuku);
