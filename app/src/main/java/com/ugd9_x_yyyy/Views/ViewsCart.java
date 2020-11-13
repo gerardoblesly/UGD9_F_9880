@@ -58,7 +58,6 @@ public class ViewsCart extends Fragment{
     private CardView panelBayar, panelCheckBox;
     private AdapterTransaksiBuku adapter;
     private List<TransaksiBuku> transaksiBukuList;
-    private List<DTBuku> DTBukuList;
     private View view;
     public Boolean isFullChecked;
 
@@ -134,7 +133,6 @@ public class ViewsCart extends Fragment{
     public void setAdapter(){
         getActivity().setTitle("Cart");
         transaksiBukuList = new ArrayList<>();
-        DTBukuList = new ArrayList<>();
         adapter = new AdapterTransaksiBuku(view.getContext(), transaksiBukuList,
                 new AdapterTransaksiBuku.OnQuantityChangeListener() {
                     @Override
@@ -222,9 +220,6 @@ public class ViewsCart extends Fragment{
                     if (!transaksiBukuList.isEmpty())
                         transaksiBukuList.clear();
 
-                    if (!DTBukuList.isEmpty())
-                        DTBukuList.clear();
-
                     for (int i = 0; i < jsonArray.length(); i++)
                     {
                         JSONObject jsonObject = (JSONObject) jsonArray.get(i);
@@ -234,9 +229,9 @@ public class ViewsCart extends Fragment{
                         String tglTransaksi = jsonObject.optString("tglTransaksi");
                         String totalBiaya = jsonObject.optString("totalBiaya");
                         String namaToko = jsonObject.optString("namaToko");
-
+                        System.out.println("Nama Toko : "+namaToko);
                         JSONArray jsonArray1 = jsonObject.optJSONArray("dtbuku");
-                        DTBukuList.clear();
+                        List<DTBuku> DTBukuList = new ArrayList<>();
                         for(int j = 0; j < jsonArray1.length(); j++)
                         {
                             JSONObject jsonObjectDT = (JSONObject) jsonArray1.get(j);
@@ -246,7 +241,7 @@ public class ViewsCart extends Fragment{
                             String namaBuku = jsonObjectDT.optString("namaBuku");
                             String harga = jsonObjectDT.optString("harga");
                             String gambar = jsonObjectDT.optString("gambar");
-
+                            System.out.println("Nama Buku : "+namaBuku);
                             DTBuku dtBuku = new DTBuku(Integer.parseInt(idBuku), noTransaksi, Integer.parseInt(jumlah), namaBuku,
                                     Double.parseDouble(harga),gambar);
                             DTBukuList.add(dtBuku);
