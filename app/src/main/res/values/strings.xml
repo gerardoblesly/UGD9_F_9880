@@ -1,0 +1,28 @@
+<resources>
+    //Jangan lupa diganti disini
+    <string name="app_name">UGD9_F_9880</string>
+    <string name="nama">Gerardo Leonel Blesly Lontaan</string>
+    <string name="npm">180709880</string>
+    <string name="kelas">F</string>
+
+
+    <string-array name="jenisKelamin">
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string-array name="prodi">
+        <item>Teknik Sipil</item>
+        <item>Teknik Industri</item>
+        <item>Informatika</item>
+        <item>Ilmu Komunikasi</item>
+        <item>Arsitektur</item>
+    </string-array>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
+    <dimen name="panel_height">570dp</dimen>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

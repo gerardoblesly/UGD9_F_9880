@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/mahasiswa"
+            android:icon="@drawable/ic_baseline_people_alt_24"
+            android:iconTint="#0091EA"
+            android:title="Mahasiswa"
+            app:showAsAction="never"></item>
+
+        <item
+            android:id="@+id/buku"
+            android:icon="@drawable/ic_baseline_menu_book_24"
+            android:iconTint="#0091EA"
+            android:title="Buku"
+            app:showAsAction="never"></item>
+
+        <item
+            android:id="@+id/transaksi"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"
+            android:iconTint="#0091EA"
+            android:title="Transaksi"
+            app:showAsAction="never"></item>
+
+        <item
+            android:id="@+id/keluar"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:iconTint="#0091EA"
+            android:title="Keluar"
+            app:showAsAction="never"></item>
+    </group>
+</menu>
